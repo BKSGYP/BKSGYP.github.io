@@ -1,0 +1,21 @@
+.main-area{
+    align-items: center;
+    text-align: center;
+    background-color: #131230;
+    background-image: url(https://www.doosanbears.com/images/icon_logo_transpert.png);
+    background-position-x: center;
+}
+h2{
+    color: #C7C6C6;
+}
+.searcharea{
+    font-size: 100px;
+    text-align: center;
+    width: 500px;
+    height: 250px;
+    background-color: #EAEAEA;
+}
+.button{
+    width: 200px;
+    height: 50px;
+}

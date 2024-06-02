@@ -1,0 +1,29 @@
+body {
+    background-color: #131230;
+    background-image: url(https://www.doosanbears.com/images/icon_logo_transpert.png);
+    background-position-x: center;
+}
+.image-wrapper{
+    border: 10px;
+    margin: 50px;
+}
+.image{
+    float: left;
+}
+.text-wrapper{
+    font-size: 25px;
+    text-align: center;
+    align-items: center;
+
+.headline{
+    font-weight: bold;
+    color: #EAEAEA;
+}
+}
+.detailinfo{
+    display: inline-block;
+    text-align: center;
+    list-style-type: none;
+    color: #B2B2B2;
+    margin: 5px;
+}

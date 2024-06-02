@@ -1,0 +1,15 @@
+doctype html 
+html 
+    head 
+        title Main Page 
+        meta(charset='utf-8')
+        style
+            include ../stylesheets/mainpage.css
+    body(class='main-area')
+        form(action='/main' method='post')
+            p 
+                h2 검색하고 싶은 선수의 등번호를 입력해주세요.
+            p 
+                input(class='searcharea' type='text' name='backnumber')
+            p 
+                input(class='button' type='submit')

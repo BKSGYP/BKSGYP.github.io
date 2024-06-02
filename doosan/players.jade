@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        meta(charset='utf-8')
+        style
+            include ../stylesheets/style.css
+    body
+        div(class="image-wrapper")
+            img(class="image" src= description[0])
+        div(class="text-wrapper")
+            - var n = 0
+                while n < description.length 
+                    unless n == 0
+                        if n % 2 == 1
+                            li(class="headline")= description[n]
+                        else 
+                            li(class="detailinfo")= description[n] 
+                    -n++
