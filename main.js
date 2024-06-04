@@ -13,6 +13,10 @@ app.locals.pretty = true;
 app.set('view engine', 'jade');
 app.set('views', './doosan');
 
+app.get('/', (req ,res)=>{
+    res.redirect('/main');
+})
+
 app.get('/main', (req, res) => {
     res.render('search');
 })
