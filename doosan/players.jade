@@ -5,6 +5,14 @@ html
         style
             include ../stylesheets/style.css
     body
+        div(class="top-wrapper")
+            div(class="button-wrapper")
+                button(class="goto-back" onclick="history.back()") 뒤로가기
+                button(class="goto-main" onclick="location.href='main'") 메인페이지
+            div(class="search-wrapper")
+                form(class='search-form' action='/main' method='post')
+                    input(class='searcharea' type='text' name='backnumber' placeholder='등번호')
+                    input(class='button' type='submit' value='검색')
         div(class="image-wrapper")
             img(class="image" src= description[0])
         div(class="text-wrapper")
@@ -16,3 +24,4 @@ html
                         else 
                             li(class="detailinfo")= description[n] 
                     -n++
+        

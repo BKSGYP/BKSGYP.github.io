@@ -9,3 +9,18 @@
     top: 300px;
     left: 500px;
 }
+.goto-main {
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: #131230;
+    outline: #B2B2B2;
+}
+
+.goto-back {
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: #131230;
+    outline: #B2B2B2;
+}

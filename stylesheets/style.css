@@ -3,27 +3,74 @@ body {
     background-image: url(https://www.doosanbears.com/images/icon_logo_transpert.png);
     background-position-x: center;
 }
-.image-wrapper{
+
+.image-wrapper {
     border: 10px;
     margin: 50px;
 }
-.image{
+
+.image {
     float: left;
 }
-.text-wrapper{
+
+.text-wrapper {
     font-size: 25px;
     text-align: center;
     align-items: center;
 
-.headline{
-    font-weight: bold;
-    color: #EAEAEA;
+    .headline {
+        font-weight: bold;
+        color: #EAEAEA;
+    }
 }
-}
-.detailinfo{
+
+.detailinfo {
     display: inline-block;
     text-align: center;
     list-style-type: none;
     color: #B2B2B2;
     margin: 5px;
+}
+.top-wrapper{
+    display: block;
+}
+.button-wrapper {
+    display: inline;
+}
+.goto-main {
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: #131230;
+    outline: #B2B2B2;
+}
+
+.goto-back {
+    width: 120px;
+    height: 40px;
+    color: #fff;
+    background-color: #131230;
+    outline: #B2B2B2;
+}
+.search-wrapper{
+    display: inline;
+    float: right;
+}
+.search-form{
+    display: inline;
+}
+.searcharea{
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    background-color: #131230;
+    color: #B2B2B2;
+    border: #B2B2B2 solid 1px;
+}
+.button{
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: #B2B2B2;
 }
