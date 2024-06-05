@@ -13,7 +13,10 @@ h2{
     text-align: center;
     width: 500px;
     height: 250px;
-    background-color: #EAEAEA;
+    background-color: #C7C6C6;
+    background-image: url(https://www.doosanbears.com/images/icon_logo_transpert.png);
+    background-position: center;
+    background-size: cover;
 }
 .button{
     width: 200px;

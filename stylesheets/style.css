@@ -43,6 +43,7 @@ body {
     color: #fff;
     background-color: #131230;
     outline: #B2B2B2;
+    border:#B2B2B2 solid 1px;
 }
 
 .goto-back {
@@ -51,6 +52,7 @@ body {
     color: #fff;
     background-color: #131230;
     outline: #B2B2B2;
+    border:#B2B2B2 solid 1px;
 }
 .search-wrapper{
     display: inline;
