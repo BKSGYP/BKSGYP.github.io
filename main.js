@@ -18,16 +18,37 @@ app.get('/', (req ,res)=>{
 })
 
 app.get('/main', (req, res) => {
-    res.render('search');
-})
+    var backnumber = req.query.backnumber; // 쿼리 파라미터로 backnumber 가져오기
 
-app.post('/main', (req, res) => {
-    var backnumber = req.body.backnumber;
-    fs.readFile('players/' + backnumber, 'utf-8', function(err, data) {
-        if (err){
+    if (backnumber) {
+        fs.readFile('players/' + backnumber, 'utf-8', function(err, data) {
+            if (err){
+                console.log(err);
+                res.render('error');
+            } else {
+                res.render('players', {number: backnumber, description: data.split('\n')});
+            }
+        });
+    } else {
+        res.render('search');
+    }
+});
+
+app.get('/comment', (req, res) => {
+    var backnumber = req.query.backnumber;
+    var comment = req.query.comment;
+
+    if (!backnumber || !comment) {
+        res.render('error', { message: '등번호 혹은 댓글 정보가 누락되었습니다.' });
+        return;
+    }
+
+    fs.appendFile('players/' + backnumber, '\n' + comment, function(err) {
+        if (err) {
             console.log(err);
             res.render('error');
+        } else {
+            res.redirect('/main?backnumber=' + backnumber);
         }
-        res.render('players', {number: backnumber, description: data.split('\n')});
-    })
-})
+    });
+});

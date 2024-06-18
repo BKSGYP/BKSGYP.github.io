@@ -4,24 +4,40 @@ html
         meta(charset='utf-8')
         style
             include ../stylesheets/style.css
+        script.
+            window.onload = function() {
+                // URL에서 backnumber 값 추출
+                var backnumber = new URL(window.location.href).searchParams.get('backnumber');
+                if (backnumber) {
+                    document.getElementById('backnumber').value = backnumber;
+                }
+            }
     body
-        div(class="top-wrapper")
-            div(class="button-wrapper")
-                button(class="goto-back" onclick="history.back()") 뒤로가기
-                button(class="goto-main" onclick="location.href='main'") 메인페이지
-            div(class="search-wrapper")
-                form(class='search-form' action='/main' method='post')
-                    input(class='searcharea' type='text' name='backnumber' placeholder='등번호')
-                    input(class='button' type='submit' value='검색')
-        div(class="image-wrapper")
-            img(class="image" src= description[0])
-        div(class="text-wrapper")
-            - var n = 0
-                while n < description.length 
-                    unless n == 0
-                        if n % 2 == 1
-                            li(class="headline")= description[n]
-                        else 
-                            li(class="detailinfo")= description[n] 
-                    -n++
-        
+        div.top-wrapper
+            div.button-wrapper
+                button.goto-back(onclick="history.back()") 뒤로가기
+                button.goto-main(onclick="location.href='/main'") 메인페이지
+            div.search-wrapper
+                form.search-form(action='/main' method='get')
+                    input.searcharea(type='text' name='backnumber' placeholder='등번호')
+                    input.button(type='submit' value='검색')
+        div.image-wrapper
+            img.image(src=description[0])
+        div.text-wrapper
+            - var n = 1
+            while n < 15
+                if n % 2 == 1
+                    li.headline= description[n]
+                else
+                    li.detailinfo= description[n]
+                - n++
+        div.comment-wrapper
+            form.comment-form(action='/comment' method='get')
+                input#backnumber(type='hidden' name='backnumber')
+                input.commentarea(type='text' name='comment' placeholder='댓글을 입력하세요' required)
+                input.button(type='submit' value='댓글 달기')
+            - var n = 15
+            while n < description.length
+                ul 
+                    li.detailinfo= description[n]
+                - n++
