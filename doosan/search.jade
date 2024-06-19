@@ -5,11 +5,24 @@ html
         meta(charset='utf-8')
         style
             include ../stylesheets/mainpage.css
-    body(class='main-area')
+    body.main-area
         form(action='/main' method='get')
             p 
                 h2 검색하고 싶은 선수의 등번호를 입력해주세요.
             p 
-                input(class='searcharea' type='text' name='backnumber')
+                input.searcharea(type='text' name='backnumber')
             p 
-                input(class='button' type='submit')
+                input.button(type='submit')
+        br
+        br
+        div.table
+            table
+                thead
+                    tr
+                        each val, index in [...Array(10).keys()]
+                            th Column #{index + 1}
+                tbody
+                    each r in [...Array(10).keys()]
+                        tr
+                            each c in [...Array(10).keys()]
+                                td Cell #{r + 1},#{c + 1}

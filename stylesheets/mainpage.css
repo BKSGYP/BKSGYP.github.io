@@ -22,3 +22,10 @@ h2{
     width: 200px;
     height: 50px;
 }
+.table{
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+}
