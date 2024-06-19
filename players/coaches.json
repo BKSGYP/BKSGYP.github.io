@@ -1,13 +1,12 @@
 [
     {"number": 77, "name": "이승엽"},
-    {"number": 73, "name": "이승엽"},
-    {"number": 70, "name": "이승엽"},
-    {"number": 79, "name": "이승엽"},
-    {"number": 75, "name": "이승엽"},
-    {"number": 91, "name": "이승엽"},
-    {"number": 92, "name": "이승엽"},
-    {"number": 77, "name": "이승엽"},
-    {"number": 89, "name": "이승엽"},
-    {"number": 88, "name": "이승엽"},
-    {"number": 78, "name": "이승엽"}
+    {"number": 73, "name": "박흥식"},
+    {"number": 70, "name": "조웅천"},
+    {"number": 79, "name": "박정배"},
+    {"number": 75, "name": "김한수"},
+    {"number": 91, "name": "이영수"},
+    {"number": 92, "name": "조성환"},
+    {"number": 89, "name": "고토"},
+    {"number": 88, "name": "정진호"},
+    {"number": 78, "name": "세리자와"}
 ]

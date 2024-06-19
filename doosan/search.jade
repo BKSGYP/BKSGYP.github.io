@@ -15,14 +15,33 @@ html
                 input.button(type='submit')
         br
         br
-        div.table
-            table
-                thead
-                    tr
-                        each val, index in [...Array(10).keys()]
-                            th Column #{index + 1}
-                tbody
-                    each r in [...Array(10).keys()]
-                        tr
-                            each c in [...Array(10).keys()]
-                                td Cell #{r + 1},#{c + 1}
+        div.position
+            h2 코칭스태프
+        div.table-wrapper
+            table.table
+                tr
+                    each coach in coaches
+                        td= coach.number
+                tr
+                    each coach in coaches
+                        td= coach.name
+        div.position
+            h2 투수
+        div.table-wrapper
+            table.table
+                tr
+                    each pitcher in pitchers
+                        td= pitcher.number
+                tr
+                    each pitcher in pitchers
+                        td= pitcher.name
+        div.position
+            h2 타자
+        div.table-wrapper
+            table.table
+                tr
+                    each batter in batters
+                        td= batter.number
+                tr
+                    each batter in batters
+                        td= batter.name
