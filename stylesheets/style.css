@@ -74,5 +74,26 @@ body {
     display: inline-block;
     width: 60px;
     height: 30px;
-    background-color: #B2B2B2;
+}
+.comment-form{
+    padding-top: 20px;
+    border-top: #fff solid 2px;
+    text-align: center;
+}
+.commenttext{
+    width: 500px;
+    height: 30px;
+}
+.commentbutton{
+    width: 60px;
+    height: 30px;
+}
+.commentarea{
+    text-align: center;
+}
+.commentinfo{
+    font-size: large;
+    font-weight: bold;
+    color: #fff;
+    list-style-type: none;
 }

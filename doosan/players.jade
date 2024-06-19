@@ -34,10 +34,11 @@ html
         div.comment-wrapper
             form.comment-form(action='/comment' method='get')
                 input#backnumber(type='hidden' name='backnumber')
-                input.commentarea(type='text' name='comment' placeholder='댓글을 입력하세요' required)
-                input.button(type='submit' value='댓글 달기')
-            - var n = 15
-            while n < description.length
-                ul 
-                    li.detailinfo= description[n]
-                - n++
+                input.commenttext(type='textarea' name='comment' placeholder='댓글을 입력하세요' required)
+                input.commentbutton(type='submit' value='입력')
+            div.commentarea
+                - var n = 15
+                while n < description.length
+                    ul 
+                        li.commentinfo= description[n]
+                    - n++
