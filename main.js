@@ -19,7 +19,7 @@ app.get('/', (req ,res)=>{
 })
 
 app.get('/main', (req, res) => {
-    var backnumber = req.query.backnumber; // 쿼리 파라미터로 backnumber 가져오기
+    var backnumber = req.query.backnumber;
     var coaches = JSON.parse(fs.readFileSync("./players/coaches.json", "utf-8"));
     var pitchers = JSON.parse(fs.readFileSync("./players/pitchers.json", "utf-8"));
     var batters = JSON.parse(fs.readFileSync("./players/batters.json", "utf-8"));

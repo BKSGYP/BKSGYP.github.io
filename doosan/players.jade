@@ -6,7 +6,6 @@ html
             include ../stylesheets/style.css
         script.
             window.onload = function() {
-                // URL에서 backnumber 값 추출
                 var backnumber = new URL(window.location.href).searchParams.get('backnumber');
                 if (backnumber) {
                     document.getElementById('backnumber').value = backnumber;
